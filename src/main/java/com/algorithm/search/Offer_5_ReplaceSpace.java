@@ -6,12 +6,15 @@ import java.util.List;
 
 public class Offer_5_ReplaceSpace {
     public String replaceSpace(String s) {
-        String[] strings = s.split(" ");
-        StringBuffer stringBuffer = new StringBuffer(strings[0]);
-        for (int i = 0; i < strings.length - 1; i++) {
-            stringBuffer.append("%20");
-            stringBuffer.append(strings[i + 1]);
+        char[] chars = s.toCharArray();
+        StringBuilder stringBuilder = new StringBuilder();
+        for (char aChar : chars) {
+            if (aChar == ' ') {
+                stringBuilder.append("%20");
+            } else {
+                stringBuilder.append(aChar);
+            }
         }
-        return new String(stringBuffer);
+        return stringBuilder.toString();
     }
 }
