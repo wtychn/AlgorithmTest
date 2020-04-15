@@ -1,8 +1,7 @@
 package com.algorithm.search;
 
+import com.algorithm.string.Offer_5_ReplaceSpace;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class Offer_5_ReplaceSpaceTest {
 

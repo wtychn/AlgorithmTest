@@ -1,8 +1,4 @@
-package com.algorithm.search;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package com.algorithm.string;
 
 public class Offer_5_ReplaceSpace {
     public String replaceSpace(String s) {
