@@ -2,12 +2,12 @@ package com.algorithm.recur;
 
 public class Offer_10_1_Fibonacci {
     public int fib(int n) {
-        if (n == 0) {
-            return 0;
+        int a = 0, b = 1, sum;
+        for (int i = 0; i < n; i++) {
+            sum = (a + b) % 1000000007;
+            a = b;
+            b = sum;
         }
-        if (n == 1) {
-            return 1;
-        }
-        return fib(n - 1) + fib(n - 2);
+        return a;
     }
 }
