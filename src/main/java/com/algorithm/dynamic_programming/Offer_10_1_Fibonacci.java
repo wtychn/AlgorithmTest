@@ -1,4 +1,4 @@
-package com.algorithm.recur;
+package com.algorithm.dynamic_programming;
 
 public class Offer_10_1_Fibonacci {
     public int fib(int n) {
