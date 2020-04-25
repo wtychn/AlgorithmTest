@@ -5,7 +5,7 @@ public class Offer_14_2_CuttingRope {
         if (n <= 3) return n - 1;
         int r = n % 3, m = 1000000007;
         long rem = 1, x = 3;
-        for (int a = n / 3; a > 0; a /= 2) {
+        for (int a = n / 3 - 1; a > 0; a /= 2) {
             if (a % 2 == 1) {
                 rem = (rem * x) % m;
             }
