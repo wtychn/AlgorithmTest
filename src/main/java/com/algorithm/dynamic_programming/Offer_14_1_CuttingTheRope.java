@@ -1,7 +1,7 @@
 package com.algorithm.dynamic_programming;
 
 public class Offer_14_1_CuttingTheRope {
-    public int cuttingRope(int n) {
+    public int cuttingRopeByDP(int n) {
         int[] dp = {0, 1, 1};
 
         for (int i = 3; i <= n; i++) {
@@ -18,5 +18,13 @@ public class Offer_14_1_CuttingTheRope {
         if (b > max) max = b;
         if (c > max) max = c;
         return max;
+    }
+
+    public int cuttingRopeByMath(int n) {
+        if (n <= 3) return n - 1;
+        int a = n / 3, b = n % 3;
+        if (b == 0) return (int) Math.pow(3, a);
+        if (b == 1) return (int) Math.pow(3, a - 1) * 4;
+        return (int) Math.pow(3, a) * 2;
     }
 }

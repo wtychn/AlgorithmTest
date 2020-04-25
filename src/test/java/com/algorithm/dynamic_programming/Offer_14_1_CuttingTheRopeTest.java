@@ -9,6 +9,6 @@ public class Offer_14_1_CuttingTheRopeTest {
     @Test
     public void cuttingRope() {
         Offer_14_1_CuttingTheRope cuttingTheRope = new Offer_14_1_CuttingTheRope();
-        assertEquals(36, cuttingTheRope.cuttingRope(10));
+        assertEquals(cuttingTheRope.cuttingRopeByMath(10), cuttingTheRope.cuttingRopeByDP(10));
     }
 }
