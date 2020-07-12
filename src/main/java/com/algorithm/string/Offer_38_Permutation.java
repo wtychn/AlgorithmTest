@@ -14,13 +14,13 @@ public class Offer_38_Permutation {
         return res.toArray(new String[0]);
     }
 
-//    cur是当前位置，循环中的i是数字
     private void dfs(int cur) {
         if (cur == chars.length - 1) {
             res.add(String.valueOf(chars));
             return;
         }
         HashSet<Character> set = new HashSet<>();
+//        cur所在位的数字处在所有i位置的情况
         for (int i = cur; i < chars.length - 1; i++) {
             if (set.contains(chars[i])) {
                 continue;
