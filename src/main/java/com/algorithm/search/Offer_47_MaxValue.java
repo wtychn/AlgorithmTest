@@ -16,4 +16,17 @@ public class Offer_47_MaxValue {
         }
         return grid[m - 1][n - 1];
     }
+
+    public int maxValue_dfs(int[][] grid) {
+        int sum = 0;
+        return dfs(grid, 0, 0, sum);
+    }
+    private int dfs(int[][] grid, int i, int j, int sum) {
+        if (i > grid.length - 1 || j > grid[0].length - 1) {
+            return sum;
+        }
+        sum += grid[i][j];
+        return  Math.max(dfs(grid, i + 1, j, sum),
+                dfs(grid, i, j + 1, sum));
+    }
 }
