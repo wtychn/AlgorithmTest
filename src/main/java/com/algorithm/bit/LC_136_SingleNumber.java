@@ -1,4 +1,4 @@
-package com.algorithm.array;
+package com.algorithm.bit;
 
 public class LC_136_SingleNumber {
     public int singleNumber(int[] nums) {
