@@ -25,4 +25,17 @@ public class Offer_58_ReverseWords {
         }
         return res.toString().trim();
     }
+
+    public String reverseWords_doublePointers(String s) {
+        s = s.trim();
+        int j = s.length() - 1, i = j;
+        StringBuilder res = new StringBuilder();
+        while (i >= 0) {
+            while (i>=0 && s.charAt(i) != ' ') i--;
+            res.append(s, i + 1, j + 1).append(" ");
+            while (i >= 0 && s.charAt(i) == ' ') i--;
+            j = i;
+        }
+        return res.toString().trim();
+    }
 }
