@@ -1,4 +1,4 @@
-package com.algorithm.dynamic_programming;
+package com.algorithm.array;
 
 import java.util.concurrent.ForkJoinPool;
 
@@ -16,6 +16,16 @@ public class LC_11_MaxArea {
                 int area = (i - j) * Math.min(height[i], height[j]);
                 max = Math.max(max, area);
             }
+        }
+        return max;
+    }
+
+    public int maxArea_DoublePointer(int[] height) {
+        int left = 0, right = height.length - 1, max = 0;
+        while (left < right) {
+            int area = height[left] < height[right] ?
+                    (right - left) * height[left++] : (right - left) * height[right--];
+            max = Math.max(max, area);
         }
         return max;
     }
