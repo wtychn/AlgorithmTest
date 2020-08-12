@@ -28,4 +28,20 @@ public class LC_19_RemoveNthFromEnd {
         }
         return head;
     }
+
+    public ListNode removeNthFromEnd_doublePoint(ListNode head, int n) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode former = dummy;
+        ListNode later = dummy;
+        for (int i = 0; i <= n; i++) {
+            later = later.next;
+        }
+        while (later != null) {
+            former = former.next;
+            later = later.next;
+        }
+        former.next = former.next.next;
+        return dummy.next;
+    }
 }
