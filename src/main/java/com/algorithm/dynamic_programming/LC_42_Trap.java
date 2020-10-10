@@ -35,6 +35,7 @@ public class LC_42_Trap {
                 if(stack.isEmpty()) break;
 
                 int w = cur - stack.peek() - 1;
+                //每次选取矮的墙，如果出现多个等高的墙能够抵消
                 int h = Math.min(height[cur], height[stack.peek()]) - lastHeight;
                 res = res + w * h;
             }
