@@ -9,7 +9,7 @@ package com.algorithm.linklist;
 public class LC_142_DetectCycle {
     public ListNode detectCycle(ListNode head) {
         if(head == null || head.next == null) return null;
-        ListNode slow = head, fast = head.next;
+        ListNode slow = head.next, fast = head.next.next;
         //第一次相遇，此时 s = nb、f = 2nb
         while (slow != fast) {
             if(fast == null || fast.next == null) return null;
