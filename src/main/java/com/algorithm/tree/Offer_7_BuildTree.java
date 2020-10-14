@@ -22,9 +22,9 @@ public class Offer_7_BuildTree {
         if (inorderLeftIndex > inorderRightIndex) {
             return null;
         }
-        int rootval = preorderArr[rootPreorderIndex];
-        TreeNode root = new TreeNode(rootval);
-        int rootInorderIndex = inorderMap.get(rootval);
+        int rootVal = preorderArr[rootPreorderIndex];
+        TreeNode root = new TreeNode(rootVal);
+        int rootInorderIndex = inorderMap.get(rootVal);
         root.left = recur(rootPreorderIndex + 1,
                 inorderLeftIndex, rootInorderIndex - 1);
         root.right = recur(rootPreorderIndex + rootInorderIndex - inorderLeftIndex + 1,
