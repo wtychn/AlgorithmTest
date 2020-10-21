@@ -1,7 +1,11 @@
 package com.algorithm.tree;
 
-import sun.reflect.generics.tree.Tree;
-
+/***
+ * @Description: 求二叉搜索树任意两节点之间的最小差
+ * @level easy
+ * @author wtychn
+ * @Date 2020/10/12
+ */
 public class LC_530_GetMinimumDifference {
     int min, pre;
 
