@@ -22,14 +22,15 @@ class test {
     }
 
     public void find(List<Integer[]> taxi, int i, int j, int count, int sum) {
-        if(j == 0) count++;
-        if(count > taxi.size() / 2) return;
+        if (j == 0) count++;
+        if (count > taxi.size() / 2) return;
         sum += taxi.get(i)[j];
         if (i == taxi.size() - 1) {
-            if(count == taxi.size() / 2) max = Math.max(max, sum);
+            if (count == taxi.size() / 2) max = Math.max(max, sum);
         } else {
             find(taxi, i + 1, 0, count, sum);
             find(taxi, i + 1, 1, count, sum);
         }
     }
 }
+
