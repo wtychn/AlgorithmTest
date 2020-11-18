@@ -3,48 +3,39 @@ package com.algorithm.sort;
 import java.util.Arrays;
 
 public class QuickSort {
-//    public static void main(final String[] args) {
-//        final int[] arr = { 53, 3, 42, 14, 748, 214 };
-//        try {
-//            System.out.println(Arrays.toString(sort(arr)));
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-
     public int[] sort(final int[] sourceArray) {
         // 对 arr 进行拷贝，不改变参数内容
         final int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
+        return quickSort(arr, 0, arr.length - 1);
+    }
 
-        quickSort(arr, 0, arr.length - 1);
-
+    private int[] quickSort(int[] arr, int left, int right) {
+        if (left < right) {
+            int partition = partition(arr, left, right);
+            quickSort(arr, left, partition - 1);
+            quickSort(arr, partition + 1, right);
+        }
         return arr;
     }
 
-    private void quickSort(final int[] arr, final int left, final int right) {
-        if (left < right) {
-            final int partitionIndex = partition(arr, left, right);
-            quickSort(arr, left, partitionIndex - 1);
-            quickSort(arr, partitionIndex + 1, right);
-        }
-    }
-
-    private int partition(final int[] arr, final int left, final int right) {
-        // 设定基准值（pivot）
-        int index = left + 1;
-        for (int i = index; i <= right; i++) {
-            if (arr[i] < arr[left]) {
+    //    pivot是标定点，这里选取数组中最左边的数作为标定点
+    private int partition(int[] arr, int pivot, int right) {
+//      index指向大于标定点的数
+        int index = pivot + 1;
+        for (int i = index; i < right + 1; i++) {
+//      出现大于标定点的数时index停止移动；再次出现小于标定点的数时，先与index指向的第一个大于标定的数换位，然后index指向下一个数
+            if (arr[i] < arr[pivot]) {
                 swap(arr, i, index);
                 index++;
             }
         }
-        swap(arr, left, index - 1);
+        swap(arr, index - 1, pivot);
         return index - 1;
     }
 
-    private void swap(final int[] arr, final int i, final int j) {
-        final int temp = arr[i];
-           arr[i] = arr[j];
-           arr[j] = temp;
+    private void swap(int[] arr, int a, int b) {
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
     }
 }
