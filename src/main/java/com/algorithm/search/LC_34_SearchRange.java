@@ -1,11 +1,10 @@
 package com.algorithm.search;
-
-/**
- * @program: AlgorithmTest
- * @description: lc34
- * @author: Mr.Wang
- * @create: 2020-08-20 17:24
- **/
+/***
+ * @Description: 在排序数组中查找元素的第一个和最后一个位置
+ * @level mid
+ * @author wtychn
+ * @Date 2020/12/1
+ */
 public class LC_34_SearchRange {
     public int[] searchRange(int[] nums, int target) {
         int index = binarySearch(nums, 0, nums.length - 1, target);
