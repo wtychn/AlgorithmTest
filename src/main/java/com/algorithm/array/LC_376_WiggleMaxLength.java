@@ -1,7 +1,7 @@
 package com.algorithm.array;
 /***
  * @Description: 最长摆动序列  
- * @level mid 
+ * @level mid
  * @author wtychn
  * @Date 2020/12/12
  */
