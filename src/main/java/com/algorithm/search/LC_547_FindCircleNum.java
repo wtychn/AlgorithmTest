@@ -1,7 +1,7 @@
 package com.algorithm.search;
 /***
  * @Description: 省份数量  
- * @level mid 
+ * @level mid
  * @author wtychn
  * @Date 2021/1/7
  */
