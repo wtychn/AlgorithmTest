@@ -1,7 +1,7 @@
 package com.algorithm.string;
 /***
  * @Description: 分割字符串的最大得分  
- * @level easy 
+ * @level easy
  * @author wtychn
  * @Date 2021/1/9
  */
