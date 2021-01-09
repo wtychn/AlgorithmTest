@@ -1,7 +1,12 @@
 package com.algorithm.string;
 
 import java.util.Stack;
-
+/***
+ * @Description: 删除子字符串的最大得分  
+ * @level mid 
+ * @author wtychn
+ * @Date 2021/1/10
+ */
 public class LC_5634_MaximumGain {
     public int maximumGain(String s, int x, int y) {
         char[] chars = s.toCharArray();
