@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 /***
  * @Description: 公平的糖果交换  
- * @level easy 
+ * @level easy
  * @author wtychn
  * @Date 2021/2/2
  */
