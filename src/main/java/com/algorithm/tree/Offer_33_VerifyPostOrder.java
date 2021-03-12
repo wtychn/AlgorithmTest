@@ -17,6 +17,7 @@ public class Offer_33_VerifyPostOrder {
         return p == j && recur(postorder, i, m - 1) && recur(postorder, m, j - 1);
     }
 
+    // 单调栈
     public boolean verifyPoster_stack(int[] postorder) {
         Stack<Integer> stack = new Stack<>();
         int root = Integer.MAX_VALUE;
