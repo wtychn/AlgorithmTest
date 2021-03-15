@@ -1,6 +1,5 @@
 package com.algorithm.hash;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 
 public class LC_705_MyHashSet {
