@@ -16,8 +16,10 @@ public class DingDing_2 {
 
     public int solution(int n, int[] a, int[] b) {
         if (n < 3) return -1;
+
         this.a = a;
         this.b = b;
+
         backTracking(0, new ArrayList<>());
         return result == Integer.MAX_VALUE ? -1 : result;
     }
@@ -27,6 +29,7 @@ public class DingDing_2 {
             result = Math.min(result, b[resList.get(0)] + b[resList.get(1)] + b[resList.get(2)]);
             return;
         }
+
         for (int i = index; i < a.length; i++) {
             // 比前面的数小，剪枝
             if (resList.size() != 0 && a[i] < a[resList.get(resList.size() - 1)]) continue;
