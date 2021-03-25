@@ -8,6 +8,7 @@ public class ListNode {
     public ListNode next;
     ListNode(){}
     ListNode(int x) { val = x; }
+    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 
     public static ListNode test() {
         ListNode node1 = new ListNode(2);

@@ -3,7 +3,7 @@ package com.algorithm.search;
 import java.util.Stack;
 /***
  * @Description: 132模式  
- * @level mid 
+ * @level mid
  * @author wtychn
  * @Date 2021/3/25
  */
