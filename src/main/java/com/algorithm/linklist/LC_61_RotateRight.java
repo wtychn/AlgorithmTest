@@ -1,13 +1,13 @@
 package com.algorithm.linklist;
 /***
  * @Description: 旋转链表  
- * @level mid 
+ * @level mid
  * @author wtychn
  * @Date 2021/3/29
  */
 public class LC_61_RotateRight {
     public ListNode rotateRight(ListNode head, int k) {
-        if(head == null) return null;
+        if(k == 0 || head == null || head.next == null) return null;
         ListNode right = head;
         int count = 1;
         while (right.next != null) {
