@@ -14,9 +14,9 @@ public class LC_61_RotateRight {
             right = right.next;
             count++;
         }
-        right.next = head;
         int n = count - k % count;
         if(n == count) return head;
+        right.next = head;
         for (int i = 0; i < n; i++) {
             right = right.next;
         }
