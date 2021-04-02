@@ -1,26 +1,32 @@
 package com.algorithm.dynamic_programming;
 
 import java.util.Stack;
-
+/***
+ * @Description: 接雨水  
+ * @level hard
+ * @author wtychn
+ * @Date 2021/4/2
+ */
 public class LC_42_Trap {
     public int trap_dp(int[] height) {
+        int n = height.length;
+        if(n == 0) return 0;
+
+        int[] leftMax = new int[n];
+        leftMax[0] = height[0];
+        for (int i = 1; i < n; ++i) {
+            leftMax[i] = Math.max(leftMax[i - 1], height[i]);
+        }
+
+        int[] rightMax = new int[n];
+        rightMax[n - 1] = height[n - 1];
+        for (int i = n - 2; i >= 0; --i) {
+            rightMax[i] = Math.max(rightMax[i + 1], height[i]);
+        }
+
         int res = 0;
-        int leftMax = 0, rightMax = 0; //两个变量动态存储最大值
-        int left = 1, right = height.length - 2; //双指针
-        for (int i = 1; i < height.length; i++) {
-            if (height[left - 1] < height[right + 1]) {
-                leftMax = Math.max(leftMax, height[left - 1]);
-                if (height[left] < leftMax) {
-                    res = res + (leftMax - height[left]);
-                }
-                left++;
-            } else {
-                rightMax = Math.max(rightMax, height[right + 1]);
-                if (height[right] < rightMax) {
-                    res = res + (rightMax - height[right]);
-                }
-                right--;
-            }
+        for (int i = 0; i < n; ++i) {
+            res += Math.min(leftMax[i], rightMax[i]) - height[i];
         }
         return res;
     }
@@ -41,6 +47,24 @@ public class LC_42_Trap {
             }
             stack.push(cur);
             cur++;
+        }
+        return res;
+    }
+
+    public int trap_doublePointers(int[] height) {
+        int left = 0, right = height.length - 1;
+        int left_max = 0, right_max = 0;
+        int res = 0;
+        while (left < right) {
+            left_max = Math.max(left_max, height[left]);
+            right_max = Math.max(right_max, height[right]);
+            if (height[left] < height[right]) {
+                res += left_max - height[left];
+                left++;
+            } else {
+                res += right_max - height[right];
+                right--;
+            }
         }
         return res;
     }
