@@ -58,6 +58,7 @@ public class LC_42_Trap {
         while (left < right) {
             left_max = Math.max(left_max, height[left]);
             right_max = Math.max(right_max, height[right]);
+            // 每次移动小的那一边，保证不会计算溢出部分
             if (height[left] < height[right]) {
                 res += left_max - height[left];
                 left++;
