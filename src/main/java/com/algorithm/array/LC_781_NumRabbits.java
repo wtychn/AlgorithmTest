@@ -3,7 +3,7 @@ package com.algorithm.array;
 import java.util.Arrays;
 /***
  * @Description: 森林中的兔子  
- * @level mid 
+ * @level mid
  * @author wtychn
  * @Date 2021/4/4
  */
