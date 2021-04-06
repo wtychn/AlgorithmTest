@@ -3,7 +3,7 @@ package com.algorithm.array;
 import java.util.PriorityQueue;
 /***
  * @Description: 魔塔游戏  
- * @level mid 
+ * @level mid
  * @author wtychn
  * @Date 2021/4/5
  */
