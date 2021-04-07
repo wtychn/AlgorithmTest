@@ -31,4 +31,20 @@ public class LCSpring_1_PurchasePlans {
         }
         return count % 1000000007;
     }
+
+    public int purchasePlans_doublePointers(int[] nums, int target) {
+        Arrays.sort(nums);
+        int l = 0, r = nums.length - 1;
+        int res = 0;
+        while (l < r) {
+            if (nums[l] + nums[r] <= target) {
+                res += r - l;
+                l++;
+            } else {
+                r--;
+            }
+            res %= 1000000007;
+        }
+        return res % 1000000007;
+    }
 }
