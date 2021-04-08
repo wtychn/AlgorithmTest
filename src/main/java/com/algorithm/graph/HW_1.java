@@ -54,7 +54,7 @@ class UnionFind {
         while (father.get(root) != null) {
             root = father.get(root);
         }
-
+        // 将树的高度简化为两层
         while (!x.equals(root)) {
             String original_father = father.get(x);
             father.put(x, root);
