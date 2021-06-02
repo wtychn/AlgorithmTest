@@ -1,4 +1,4 @@
-package com.algorithm.array;
+package com.algorithm.prefix;
 
 import java.util.ArrayList;
 import java.util.List;

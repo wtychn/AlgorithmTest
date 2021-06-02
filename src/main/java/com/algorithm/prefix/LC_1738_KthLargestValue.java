@@ -1,4 +1,4 @@
-package com.algorithm.array;
+package com.algorithm.prefix;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

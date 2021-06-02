@@ -1,4 +1,4 @@
-package com.algorithm.hash;
+package com.algorithm.prefix;
 
 import java.util.*;
 /***
