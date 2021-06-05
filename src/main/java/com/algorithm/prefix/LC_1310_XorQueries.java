@@ -1,4 +1,4 @@
-package com.algorithm.math;
+package com.algorithm.prefix;
 /***
  * @Description: 子数组异或查询
  * @level mid

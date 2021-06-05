@@ -1,10 +1,7 @@
 package com.algorithm.array;
 
-import com.algorithm.string.LC_5602_CloseStrings;
-import com.algorithm.string.LC_5606_GetSmallestString;
+import com.algorithm.prefix.LC_5607_WaysToMakeFair;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class LC_5607_WaysToMakeFairTest {
 

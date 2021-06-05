@@ -1,8 +1,7 @@
 package com.algorithm.hash;
 
+import com.algorithm.prefix.LC_1442_CountTriplets;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class LC_1442_CountTripletsTest {
 
