@@ -18,7 +18,7 @@ public class LC_274_HIndex {
             if (mNum >= length - m) {
                 r = m;
             } else {
-                l = m - 1;
+                l = m + 1;
             }
         }
         int count = length - l;
