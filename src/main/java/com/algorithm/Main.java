@@ -1,15 +1,10 @@
 package com.algorithm;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
-    public void solution() {
 
-    }
-
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-    }
 }
 
 
