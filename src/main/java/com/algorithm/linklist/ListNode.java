@@ -6,8 +6,13 @@ import java.util.List;
 public class ListNode {
     public int val;
     public ListNode next;
+    public ListNode random;
     ListNode(){}
-    ListNode(int x) { val = x; }
+    ListNode(int x) {
+        val = x;
+        next = null;
+        random = null;
+    }
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 
     public static ListNode test() {
