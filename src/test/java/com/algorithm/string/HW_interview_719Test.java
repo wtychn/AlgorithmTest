@@ -1,9 +1,6 @@
 package com.algorithm.string;
 
-import com.algorithm.Main;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class HW_interview_719Test {
 
