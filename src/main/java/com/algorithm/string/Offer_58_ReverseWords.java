@@ -5,18 +5,18 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-/**
- * @program: AlgorithmTest
- * @description: offer58
- * @author: Mr.Wang
- * @create: 2020-07-27 18:27
- **/
+/***
+ * @Description: 按单词反转字符串
+ * @level mid
+ * @author wtychn
+ * @Date 2021/9/29
+ */
 public class Offer_58_ReverseWords {
     public String reverseWords(String s) {
         String[] strings = s.trim().split(" ");
         Stack<String> stringStack = new Stack<>();
         for (String str : strings) {
-            if(!str.equals("")) stringStack.add(str);
+            if (!str.equals("")) stringStack.add(str);
         }
         StringBuilder res = new StringBuilder();
         while (!stringStack.isEmpty()) {
@@ -31,7 +31,7 @@ public class Offer_58_ReverseWords {
         int j = s.length() - 1, i = j;
         StringBuilder res = new StringBuilder();
         while (i >= 0) {
-            while (i>=0 && s.charAt(i) != ' ') i--;
+            while (i >= 0 && s.charAt(i) != ' ') i--;
             res.append(s, i + 1, j + 1).append(" ");
             while (i >= 0 && s.charAt(i) == ' ') i--;
             j = i;
